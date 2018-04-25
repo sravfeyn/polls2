@@ -5,7 +5,12 @@ from .models import Question
 
 
 def index(request):
-    return HttpResponse("Hello World from a view")
+    return render(
+        request,
+        'polls/index.html',
+        {'questions': Question.objects.order_by('-published_date')[:5]}
+    )
+
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
