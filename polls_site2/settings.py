@@ -26,7 +26,9 @@ SECRET_KEY = 'wl#qcqd=ks(*xfz6ot+ml+5rdai1=^ag*o8j0wihav!0rhw_g0'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGIN_URL = '/login'
+LOGIN_REDIRECT_URL = '/polls/'
+LOGOUT_REDIRECT_URL = LOGIN_URL
 
 # Application definition
 
